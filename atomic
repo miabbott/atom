@@ -181,6 +181,9 @@ def create_parser(atomic):
         # atomic host status
         statusp = host_subparser.add_parser(
             "status", help=_("list information about all deployments"))
+        statusp.add_argument("-j", "--json", dest="json",
+                             action="store_true",
+                             help=_("Display status in JSON format"))
         statusp.add_argument("-p", "--pretty", dest="pretty",
                               action="store_true",
                               help=_("Display status in formatted rows"))
